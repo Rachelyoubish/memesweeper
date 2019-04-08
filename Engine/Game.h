@@ -37,6 +37,7 @@ private:
 	void UpdateModel();
 	/********************************/
 	/*  User Functions              */
+	int WeAreFuckedNow(int n);
 	/********************************/
 private:
 	MainWindow& wnd;

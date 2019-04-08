@@ -26,8 +26,9 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	field( gfx.GetRect().GetCenter(), 4 )
+	field( gfx.GetRect().GetCenter(), 8 )
 {
+	int factfive = WeAreFuckedNow(5);
 }
 
 void Game::Go()
@@ -62,6 +63,18 @@ void Game::UpdateModel()
 				}
 			}
 		}
+	}
+}
+
+int Game::WeAreFuckedNow(int n)
+{
+	if (n == 1)
+	{
+		return 1;
+	}
+	else
+	{
+		return n * WeAreFuckedNow(n -1);
 	}
 }
 
